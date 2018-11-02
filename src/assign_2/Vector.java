@@ -23,8 +23,17 @@ public class Vector {
         
     }
     
-    public Vector append(){
+    public Vector append(double[] doubleArray){
         return null;
     }
+    
+    public Vector append(int[] intArray){
+        return null;
+    }
+    
+    public Vector append(Vector V){
+        return null;
+    }
+    
     
 }
