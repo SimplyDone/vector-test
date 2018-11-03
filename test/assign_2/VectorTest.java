@@ -18,6 +18,9 @@ import static org.junit.Assert.*;
  */
 public class VectorTest {
     
+    private Vector v1;
+    
+    
     public VectorTest() {
     }
     
@@ -31,6 +34,7 @@ public class VectorTest {
     
     @Before
     public void setUp() {
+
     }
     
     @After
@@ -38,9 +42,9 @@ public class VectorTest {
     }
 
     @Test
-    public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testLegalConstuction() {
+        v1 = new Vector();
+        assertEquals("Empty vector", 0, v1.getSize()); 
     }
     
 }

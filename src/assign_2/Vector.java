@@ -10,8 +10,12 @@ package assign_2;
  * @author Alex Zurad
  */
 public class Vector {
-    // Constructors
+
+    private double[] elements;
+    
+
     public Vector(){
+        elements = new double[0];
         
     }
     
@@ -23,11 +27,16 @@ public class Vector {
         
     }
     
+
+    public int getSize(){
+        return elements.length;
+    }
+    
+
     public Vector(int[] I){
     
     }
-    ////////////
-    // Methods
+
     public Vector append(double[] doubleArray){
         return null;
     }
