@@ -11,7 +11,10 @@ package assign_2;
  */
 public class Vector {
     
+    private double[] elements;
+    
     public Vector(){
+        elements = new double[0];
         
     }
     
@@ -21,6 +24,10 @@ public class Vector {
     
     public Vector(double[] d){
         
+    }
+    
+    public int getSize(){
+        return elements.length;
     }
     
     public Vector append(double[] doubleArray){
