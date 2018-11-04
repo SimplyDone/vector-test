@@ -17,34 +17,63 @@ import static org.junit.Assert.*;
  * @author Alex Zurad
  */
 public class VectorTest {
-    
+
     private Vector v1;
-    
-    
+
     public VectorTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
 
     }
-    
+
     @After
     public void tearDown() {
     }
 
     @Test
-    public void testLegalConstuction() {
+    public void testDefaultConstruction() {
+        
         v1 = new Vector();
-        assertEquals("Empty vector", 0, v1.getSize()); 
+        
+        assertEquals("Size is 0", 0, v1.getLength());
     }
     
+    @Test
+    public void testSizeAndDefaultValueConstruction() {
+        
+        int size = 0;
+        double initValue = 0;
+        
+        v1 = new Vector(size, initValue);
+        assertEquals("Size is equal to defined value", size, v1.getLength());
+    }
+    
+    @Test
+    public void testDoubleArrayConstruction() {
+        
+        double[] values = null;
+        v1 = new Vector(values);
+        
+        assertEquals("Null values provided equals 0", 0, v1.getLength());
+    }
+    
+    @Test
+    public void testIntegerArrayConstruction() {
+        
+        int[] values = null;
+        v1 = new Vector(values);
+        
+        assertEquals("Null values provided equals 0", 0, v1.getLength());
+    }
+
 }
