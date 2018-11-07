@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  */
 public class VectorTest {
 
-    private Vector v1;
+    private Vector[] testVectors;
 
     public VectorTest() {
     }
@@ -33,47 +33,43 @@ public class VectorTest {
 
     @Before
     public void setUp() {
+        testVectors = new Vector[4];
 
     }
 
     @After
     public void tearDown() {
+        testVectors = null;
     }
 
     @Test
     public void testDefaultConstruction() {
         
-        v1 = new Vector();
-        
-        assertEquals("Size is 0", 0, v1.getLength());
+       
     }
+   
     
     @Test
-    public void testSizeAndDefaultValueConstruction() {
+    public void testEquals() {
         
-        int size = 0;
-        double initValue = 0;
+        testVectors[0] = new Vector(4, 2);
+        testVectors[1] = new Vector(4, 2);
+        testVectors[2] = new Vector(4, 2);
+        testVectors[3] = new Vector(3, 3);
         
-        v1 = new Vector(size, initValue);
-        assertEquals("Size is equal to defined value", size, v1.getLength());
-    }
-    
-    @Test
-    public void testDoubleArrayConstruction() {
+        // if a = b then b = a
+        assertEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equal(testVectors[1]) );
+        assertEquals("Vector 1 must be equal to Vector 0", true, testVectors[1].equal(testVectors[0]) );
         
-        double[] values = null;
-        v1 = new Vector(values);
+        //if a = b and b = c then c = a
+        assertEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equal(testVectors[1]) );
+        assertEquals("Vector 1 must be equal to Vector 0", true, testVectors[1].equal(testVectors[0]) );
         
-        assertEquals("Null values provided equals 0", 0, v1.getLength());
-    }
-    
-    @Test
-    public void testIntegerArrayConstruction() {
         
-        int[] values = null;
-        v1 = new Vector(values);
-        
-        assertEquals("Null values provided equals 0", 0, v1.getLength());
+        // if a/= b then b=/ a
+        assertNotEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equal(testVectors[3]) );
+        assertNotEquals("Vector 1 must be equal to Vector 0", true, testVectors[3].equal(testVectors[0]) );
+
     }
 
 }
