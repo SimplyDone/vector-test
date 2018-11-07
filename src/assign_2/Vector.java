@@ -49,9 +49,18 @@ public class Vector {
         return null;
     }
 
-    public boolean equal(Vector V) { //this and V are the same
-        return false;
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Vector other = (Vector) obj;
+        return true;
     }
+
 
     public int getLength() {//returns number of elements in this
         return 0;
