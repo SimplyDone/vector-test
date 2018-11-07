@@ -17,34 +17,59 @@ import static org.junit.Assert.*;
  * @author Alex Zurad
  */
 public class VectorTest {
-    
-    private Vector v1;
-    
-    
+
+    private Vector[] testVectors;
+
     public VectorTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
+        testVectors = new Vector[4];
 
     }
-    
+
     @After
     public void tearDown() {
+        testVectors = null;
     }
 
     @Test
-    public void testLegalConstuction() {
-        v1 = new Vector();
-        assertEquals("Empty vector", 0, v1.getSize()); 
+    public void testDefaultConstruction() {
+        
+       
     }
+   
     
+    @Test
+    public void testEquals() {
+        
+        testVectors[0] = new Vector(4, 2);
+        testVectors[1] = new Vector(4, 2);
+        testVectors[2] = new Vector(4, 2);
+        testVectors[3] = new Vector(3, 3);
+        
+        // if a = b then b = a
+        assertEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equal(testVectors[1]) );
+        assertEquals("Vector 1 must be equal to Vector 0", true, testVectors[1].equal(testVectors[0]) );
+        
+        //if a = b and b = c then c = a
+        assertEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equal(testVectors[1]) );
+        assertEquals("Vector 1 must be equal to Vector 0", true, testVectors[1].equal(testVectors[0]) );
+        
+        
+        // if a/= b then b=/ a
+        assertNotEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equal(testVectors[3]) );
+        assertNotEquals("Vector 1 must be equal to Vector 0", true, testVectors[3].equal(testVectors[0]) );
+
+    }
+
 }
