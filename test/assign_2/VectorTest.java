@@ -76,5 +76,6 @@ public class VectorTest {
         assertNotEquals("Vector 1 must be equal to Vector 0", true, testVectors[3].equals(testVectors[0]) );
 
     }
+    
 
 }
