@@ -84,7 +84,6 @@ public class Vector {
         return null;
     }
     
-
     public Vector subV(int l, int r) throws IndexOutOfBoundsException {//will return a sub vector between the
         //indices l and r inclusive
         return null;
