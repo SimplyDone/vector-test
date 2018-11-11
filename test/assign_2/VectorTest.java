@@ -168,6 +168,40 @@ public class VectorTest {
             assertEquals("Vector" + i + " must equal the expected result.", normalizedVectors[i], expectedVectors[i]);
         }   
     }
+    
+    @Test (expected = NullPointerException.class)
+    public void testEuclidianDistanceException() {
+        
+        Vector a = new Vector();
+        Vector b = null;
+        
+        a.EuclidianDistance(b);
+
+    }
+    
+    
+    @Test
+    public void testEuclidianDistance() {
+        
+        double[][] initalValuesA = {{0}, {0,0}, {0}, {2}, {0}, {1,2}, {-1,2,3}};
+        double[][] initalValuesB = {{0}, {0,0}, {2}, {0}, {-1}, {3,4}, {2,-1,3}};
+        double[] expectedValues = {0, 0, 2, 2, 1, sqrt(8), sqrt(18)};
+        double[] calculatedValues = new double[initalValuesA.length];
+       
+        Vector[] initalAVectors = new Vector[initalValuesA.length];
+        Vector[] initalBVectors = new Vector[initalValuesA.length];
+
+        
+        for(int i = 0; i< initalAVectors.length; i++){
+            initalAVectors[i] = new Vector(initalValuesA[i]);
+            initalBVectors[i] = new Vector(initalValuesB[i]);
+            calculatedValues[i] = initalAVectors[i].EuclidianDistance(initalBVectors[i]);
+            
+            assertEquals("The Euclian distance between ", expectedValues[i], calculatedValues[i], 0);
+        }   
+    }
+    
+    
    
     @Test 
     public void testAddVector(){
