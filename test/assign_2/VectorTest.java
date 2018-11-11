@@ -201,6 +201,58 @@ public class VectorTest {
         }   
     }
     
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testGetValueOOBExceptionUnder() {
+        
+        Vector a = new Vector(new double[] {1,2,3});
+        a.getValue(-1);
+    }
+    
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testGetValueOOBExceptionOver() {
+        
+        Vector a = new Vector(new double[] {1,2,3});
+        a.getValue(3);
+    }
+    
+    
+    @Test
+    public void testGetValue() {
+        
+        double[][] initialVectorValues = {{0}, {1,2}, {3,4,5}, {-2,-3,5,1,0}};
+        int[] initialInputs = {0,1,1,3};
+        double[] expectedValues = {0, 2, 4, 1};
+        
+        
+        for(int i = 0; i< initialVectorValues.length; i++){
+            
+            assertEquals("Value of vector" + i + " must equal expected value.",
+                    expectedValues[i],
+                    (new Vector(initialVectorValues[i]))
+                            .getValue(initialInputs[i]), 0);
+            
+        }
+        
+    }
+    
+    @Test
+    public void testVectorLength() {
+        
+        double[][] initalValues = {{0}, {0,0}, {1}, {1,2}, {1,2,3,4}};
+        int[] expectedValues = {1, 2, 1, 2, 4};
+        int[] calculatedValues = new int[initalValues.length];
+        
+         Vector[] initalVectors = new Vector[initalValues.length];
+        
+        for(int i = 0; i< initalValues.length; i++){
+            
+             initalVectors[i] = new Vector(initalValues[i]);
+             calculatedValues[i] = initalVectors[i].getLength();
+             
+             assertEquals("Length of vector" + i + " must equal expected value.", expectedValues[i], calculatedValues[i]);
+        }
+        
+    }
     
    
     @Test 
