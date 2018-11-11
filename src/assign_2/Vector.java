@@ -74,7 +74,9 @@ public class Vector {
     }
 
     public Vector subV(int l, int r) {//will return a sub vector between the
-        //indices l and r inclusive
+                                        //indices l and r inclusive
+        
+        
         return null;
     }
 
