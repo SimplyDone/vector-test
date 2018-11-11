@@ -5,6 +5,7 @@
  */
 package assign_2;
 
+import static java.lang.Math.sqrt;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -146,32 +147,26 @@ public class VectorTest {
 
     }
     
+
+    
     @Test
     public void testNormalize() {
         
-        double[] orig3 = {1,2};
+        double[][] initalValues = {{0}, {0,0}, {1}, {2}, {1,1}, {-1,-1}, {1,2,3}};
+        double[][] expectedValues = {{0}, {0,0}, {1}, {1}, {1/sqrt(2), 1/sqrt(2)}, {-1/sqrt(2), -1/sqrt(2)}, {1/sqrt(14),2/sqrt(14),3/sqrt(14)}};
         
-        Vector[] orig = new Vector[5];
-        Vector[] norm = new Vector[5];
-        Vector[] expected = new Vector[5];
-        
-        
-        orig[0] = new Vector(); //empty vector
-        orig[1] = new Vector(1, 1); //1d vector of length 1
-        orig[2] = new Vector(1, 2); //1d vector of length 2
-        orig[3] = new Vector(orig3);
-        orig[4] = new Vector(0,0);
-        
-        for(int i = 0; i< orig.length; i++){
-            norm[i] = orig[i].Normalize();
-        }
        
-        //prob shouldnt loop this
-        for(Vector vector: testVectors){
-            assertNotNull("Normalized vector should not be null.", vector);
-        }
+        Vector[] initalVectors = new Vector[initalValues.length];
+        Vector[] normalizedVectors = new Vector[initalValues.length];
+        Vector[] expectedVectors = new Vector[initalValues.length];
         
-
+        for(int i = 0; i< initalVectors.length; i++){
+            initalVectors[i] = new Vector(initalValues[i]);
+            normalizedVectors[i] = initalVectors[i].Normalize();
+            expectedVectors[i] = new Vector(expectedValues[i]);
+            
+            assertEquals("Vector" + i + " must equal the expected result.", normalizedVectors[i], expectedVectors[i]);
+        }   
     }
    
     @Test 
