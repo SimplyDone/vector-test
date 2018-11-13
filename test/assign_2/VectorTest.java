@@ -16,15 +16,15 @@ import org.junit.runner.*;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
-
-/** 
+/**
  *
  * @author Alex Zurad.
  */
 @RunWith(Suite.class)
 @SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class,
     VectorEuclideanDistTests.class, VectorNormalizeTests.class,
-    VectorLengthTest.class, VectorEqualsTests.class, VectorCloneTests.class})
+    VectorLengthTest.class, VectorEqualsTests.class, VectorCloneTests.class,
+    VectorOperationsWithDoublesTests.class, VectorOperationsWithVectorsTests.class})
 public class VectorTest {
 
     private Vector[] testVectors;
@@ -53,15 +53,15 @@ public class VectorTest {
 
     @Test
     public void testDefaultConstructor() {
-        
+
         testVectors[0] = new Vector();
         testVectors[1] = new Vector();
-        
+
         // vectors should be equal
         assertEquals("The vectors should be equal.", true, testVectors[0].equals(testVectors[1]));
-       
+
     }
-    
+
     // check if append result is not null
     // compare append base case -> appended cases
     // append somehting <-> null
@@ -70,72 +70,31 @@ public class VectorTest {
     // append something <-> 0
     // compare appending both ways
     // compare equivalent appends (intArrary and double Array)
-    
     @Test
-    public void testAppendDoubleArray(){
+    public void testAppendDoubleArray() {
         double aDouble[] = {1.1, 2.5};
         double bDouble[] = {1.3, 2.4, 3.0};
         double nDouble[] = null;
-        
+
         testVectors[0] = new Vector(aDouble);
         testVectors[1] = new Vector();
-        
+
         testVectors[1].append(aDouble);
-        
-        assertEquals("Appending a double to a vector must equal a vector constructed with the same double", 
+
+        assertEquals("Appending a double to a vector must equal a vector constructed with the same double",
                 true, testVectors[0].equals(testVectors[1]));
-        
-        assertEquals("A vector constructed with a double must equal an Appended double to a vector", 
+
+        assertEquals("A vector constructed with a double must equal an Appended double to a vector",
                 true, testVectors[1].equals(testVectors[0]));
-        
-        
+
         testVectors[2] = new Vector();
         testVectors[3] = new Vector(nDouble);
-        
+
         testVectors[2].append(0.0);
-        
-        assertEquals("A vector constructed with a double must equal an Appended double to a vector", 
+
+        assertEquals("A vector constructed with a double must equal an Appended double to a vector",
                 true, testVectors[1].equals(testVectors[2]));
     }
-    
-    
-    @Test
-    public void testAppendIntegerArray(){
-        
-    }
-    
-    @Test
-    public void testAppendVector(){
-        
-    }
-    
-    @Test
-    public void testAppendDouble(){
-        
-    
-    }
-    
-    
-   /* append to 0 vector
-    
-
-    */
-    
-    
-    
-
-    
-   
-    @Test 
-    public void testAddVector(){
-        // exception for different sized vectors?
-        testVectors[0] = new Vector();
-        testVectors[1] = new Vector();
-    }
 
 
-    @Test 
-    public void testAddDouble(){
-        
-    }
 }
