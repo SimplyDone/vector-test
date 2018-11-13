@@ -36,16 +36,16 @@ public class VectorGetValueTests {
     public static Collection input(){
         return Arrays.asList(
                 new Object[][] {
-                    {new Vector(new double[] {1,2,3}), 0, 1},
-                    {new Vector(new double[] {1,2,3}), 1, 2},
-                    {new Vector(new double[] {1,2,3}), 2, 3}
+                    {new Vector(new double[] {1,2,3}), 0, 1}, //tests first element of array
+                    {new Vector(new double[] {1,2.2,2,2.6,3}), 2, 2}, // tests an arbitrary middle elment of the array
+                    {new Vector(new double[] {1,2,3}), 2, 3} //tests the last element of the array
                 });
     }
     
     @Test
     public void testGetValue() {
         assertEquals("getValue must return expected results.",
-                testVector.getValue(testValue), expectedResult, 0);
+                 expectedResult, testVector.getValue(testValue), 0);
         
      
     }

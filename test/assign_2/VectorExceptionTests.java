@@ -14,14 +14,14 @@ import org.junit.Test;
 public class VectorExceptionTests {
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testGetValueOOBExceptionUnder() {
+    public void testGetValueOutOfBoundsExceptionUnder() {
 
         Vector a = new Vector(new double[]{1, 2, 3, 4});
         a.getValue(-1);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testGetValueOOBExceptionOver() {
+    public void testGetValueOutOfBoundsExceptionOver() {
 
         Vector a = new Vector(new double[]{1, 2, 3, 4, 5, 9});
         a.getValue(6);
