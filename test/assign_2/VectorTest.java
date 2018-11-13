@@ -12,11 +12,17 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.runner.*;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+
 
 /** 
  *
  * @author Alex Zurad
  */
+@RunWith(Suite.class)
+@SuiteClasses({VectorGetValueTests.class})
 public class VectorTest {
 
     private Vector[] testVectors;
@@ -201,39 +207,7 @@ public class VectorTest {
         }   
     }
     
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void testGetValueOOBExceptionUnder() {
-        
-        Vector a = new Vector(new double[] {1,2,3});
-        a.getValue(-1);
-    }
     
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void testGetValueOOBExceptionOver() {
-        
-        Vector a = new Vector(new double[] {1,2,3});
-        a.getValue(3);
-    }
-    
-    
-    @Test
-    public void testGetValue() {
-        
-        double[][] initialVectorValues = {{0}, {1,2}, {3,4,5}, {-2,-3,5,1,0}};
-        int[] initialInputs = {0,1,1,3};
-        double[] expectedValues = {0, 2, 4, 1};
-        
-        
-        for(int i = 0; i< initialVectorValues.length; i++){
-            
-            assertEquals("Value of vector" + i + " must equal expected value.",
-                    expectedValues[i],
-                    (new Vector(initialVectorValues[i]))
-                            .getValue(initialInputs[i]), 0);
-            
-        }
-        
-    }
     
     @Test
     public void testVectorLength() {
