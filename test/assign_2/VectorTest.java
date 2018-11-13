@@ -22,7 +22,7 @@ import org.junit.runners.Suite.SuiteClasses;
  * @author Alex Zurad
  */
 @RunWith(Suite.class)
-@SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class, VectorEuclideanDistTests.class, VectorNormalizeTests.class})
+@SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class, VectorEuclideanDistTests.class, VectorNormalizeTests.class, VectorLengthTest.class})
 public class VectorTest {
 
     private Vector[] testVectors;
