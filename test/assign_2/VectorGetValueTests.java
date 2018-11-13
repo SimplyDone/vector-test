@@ -42,20 +42,6 @@ public class VectorGetValueTests {
                 });
     }
     
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void testGetValueOOBExceptionUnder() {
-        
-        Vector a = new Vector(new double[] {1,2,3});
-        a.getValue(-1);
-    }
-    
-    @Test(expected = IndexOutOfBoundsException.class)
-    public void testGetValueOOBExceptionOver() {
-        
-        Vector a = new Vector(new double[] {1,2,3});
-        a.getValue(3);
-    }
-    
     @Test
     public void testGetValue() {
         assertEquals("getValue must return expected results.",
