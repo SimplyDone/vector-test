@@ -89,11 +89,11 @@ public class Vector {
         return null;
     }
 
-    public Vector Mult(Vector V) throws NullPointerException {//Multiple every element of this by corresponding element in V
+    public Vector mult(Vector V) throws NullPointerException {//Multiple every element of this by corresponding element in V
         return null;
     }
 
-    public Vector Mult(double aDouble) {//Multiply every element of this by aDouble
+    public Vector mult(double aDouble) {//Multiply every element of this by aDouble
         return null;
     }
 
