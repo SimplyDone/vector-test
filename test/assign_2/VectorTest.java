@@ -22,7 +22,9 @@ import org.junit.runners.Suite.SuiteClasses;
  * @author Alex Zurad.
  */
 @RunWith(Suite.class)
-@SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class, VectorEuclideanDistTests.class, VectorNormalizeTests.class, VectorLengthTest.class, VectorEqualsTests.class})
+@SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class,
+    VectorEuclideanDistTests.class, VectorNormalizeTests.class,
+    VectorLengthTest.class, VectorEqualsTests.class, VectorCloneTests.class})
 public class VectorTest {
 
     private Vector[] testVectors;
@@ -120,17 +122,6 @@ public class VectorTest {
     */
     
     
-    
-    @Test
-    public void testClone() {
-        
-        testVectors[0] = new Vector(4, 2);
-        testVectors[1] = new Vector(4, 2);
-        testVectors[2] = new Vector(4, 2);
-        testVectors[3] = new Vector(3, 3);
-        
-
-    }
     
 
     

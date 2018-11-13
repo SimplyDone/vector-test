@@ -54,7 +54,6 @@ public class VectorEqualsTests {
                     {testVectors[1], expectedVectors[1], false}, //general vector with no negative elements
                     {testVectors[2], expectedVectors[2], false}, //general vector with all negative elements
                     {testVectors[3], expectedVectors[3], true},
-                    {testVectors[3], new Object(), false}//general vector with negative and positve values
                 });
     }
 
