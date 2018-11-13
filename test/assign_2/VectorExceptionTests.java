@@ -27,4 +27,14 @@ public class VectorExceptionTests {
         a.getValue(6);
     }
 
+    @Test(expected = NullPointerException.class)
+    public void testEuclidianDistanceException() {
+
+        Vector a = new Vector();
+        Vector b = null;
+
+        a.EuclidianDistance(b);
+
+    }
+
 }
