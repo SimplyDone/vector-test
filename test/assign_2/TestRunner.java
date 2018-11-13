@@ -1,6 +1,6 @@
 
 package assign_2;
-//poo
+
 	
 
 import org.junit.runner.JUnitCore;		
