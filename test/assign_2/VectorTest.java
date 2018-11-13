@@ -153,29 +153,6 @@ public class VectorTest {
 
     }
     
-
-    
-    @Test
-    public void testNormalize() {
-        
-        double[][] initalValues = {{0}, {0,0}, {1}, {2}, {1,1}, {-1,-1}, {1,2,3}};
-        double[][] expectedValues = {{0}, {0,0}, {1}, {1}, {1/sqrt(2), 1/sqrt(2)}, {-1/sqrt(2), -1/sqrt(2)}, {1/sqrt(14),2/sqrt(14),3/sqrt(14)}};
-        
-       
-        Vector[] initalVectors = new Vector[initalValues.length];
-        Vector[] normalizedVectors = new Vector[initalValues.length];
-        Vector[] expectedVectors = new Vector[initalValues.length];
-        
-        for(int i = 0; i< initalVectors.length; i++){
-            initalVectors[i] = new Vector(initalValues[i]);
-            normalizedVectors[i] = initalVectors[i].Normalize();
-            expectedVectors[i] = new Vector(expectedValues[i]);
-            
-            assertEquals("Vector" + i + " must equal the expected result.", normalizedVectors[i], expectedVectors[i]);
-        }   
-    }
-    
-    
     @Test
     public void testVectorLength() {
         
