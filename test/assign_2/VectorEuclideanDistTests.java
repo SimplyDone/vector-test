@@ -46,7 +46,7 @@ public class VectorEuclideanDistTests {
     }
     
     @Test
-    public void testGetValue() {
+    public void testEuclideanDistance() {
         assertEquals("euclideanDist must return expected results.",
                  expectedResult, testVectorA.EuclidianDistance(testVectorB), 0);
     }
