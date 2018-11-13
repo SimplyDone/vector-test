@@ -19,10 +19,10 @@ import org.junit.runners.Suite.SuiteClasses;
 
 /** 
  *
- * @author Alex Zurad
+ * @author Alex Zurad.
  */
 @RunWith(Suite.class)
-@SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class, VectorEuclideanDistTests.class, VectorNormalizeTests.class, VectorLengthTest.class})
+@SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class, VectorEuclideanDistTests.class, VectorNormalizeTests.class, VectorLengthTest.class, VectorEqualsTests.class})
 public class VectorTest {
 
     private Vector[] testVectors;
@@ -119,28 +119,7 @@ public class VectorTest {
 
     */
     
-    @Test
-    public void testEquals() {
-        
-        testVectors[0] = new Vector(4, 2);
-        testVectors[1] = new Vector(4, 2);
-        testVectors[2] = new Vector(4, 2);
-        testVectors[3] = new Vector(3, 3);
-        
-        // if a = b then b = a
-        assertEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equals(testVectors[1]) );
-        assertEquals("Vector 1 must be equal to Vector 0", true, testVectors[1].equals(testVectors[0]) );
-        
-        //if a = b and b = c then c = a
-        assertEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equals(testVectors[1]) );
-        assertEquals("Vector 1 must be equal to Vector 0", true, testVectors[1].equals(testVectors[0]) );
-        
-        
-        // if a/= b then b=/ a
-        assertNotEquals("Vector 0 must be equal to Vector 1", true, testVectors[0].equals(testVectors[3]) );
-        assertNotEquals("Vector 1 must be equal to Vector 0", true, testVectors[3].equals(testVectors[0]) );
-
-    }
+    
     
     @Test
     public void testClone() {
@@ -153,24 +132,7 @@ public class VectorTest {
 
     }
     
-    @Test
-    public void testVectorLength() {
-        
-        double[][] initalValues = {{0}, {0,0}, {1}, {1,2}, {1,2,3,4}};
-        int[] expectedValues = {1, 2, 1, 2, 4};
-        int[] calculatedValues = new int[initalValues.length];
-        
-         Vector[] initalVectors = new Vector[initalValues.length];
-        
-        for(int i = 0; i< initalValues.length; i++){
-            
-             initalVectors[i] = new Vector(initalValues[i]);
-             calculatedValues[i] = initalVectors[i].getLength();
-             
-             assertEquals("Length of vector" + i + " must equal expected value.", expectedValues[i], calculatedValues[i]);
-        }
-        
-    }
+
     
    
     @Test 
