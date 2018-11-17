@@ -36,5 +36,42 @@ public class VectorExceptionTests {
         a.EuclidianDistance(b);
 
     }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testSizeInitialConstuctorIllegalArgumentException() {
+        
+        Vector a = new Vector(0, 1);    
+    }
+    
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testDoubleArrayConstuctorIllegalArgumentException() {
+        
+        double[] array = {};
+        Vector a = new Vector(array);    
+    }
+    
+    @Test(expected = NullPointerException.class)
+    public void testDoubleArrayConstuctorNullPointerException() {
+        
+        double[] array = null;
+        Vector a = new Vector(array);    
+    }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testIntArrayConstuctorIllegalArgumentException() {
+        
+        int[] array = {};
+        Vector a = new Vector(array);    
+    }
+    
+    @Test(expected = NullPointerException.class)
+    public void testIntArrayConstuctorNullPointerException() {
+        
+        int[] array = null;
+        Vector a = new Vector(array);    
+    }
+    
+    
 
 }
