@@ -34,7 +34,6 @@ public class VectorExceptionTests {
         Vector b = null;
 
         a.EuclidianDistance(b);
-
     }
 
 }
