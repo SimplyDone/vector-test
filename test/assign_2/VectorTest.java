@@ -24,7 +24,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class,
     VectorEuclideanDistTests.class, VectorNormalizeTests.class,
     VectorLengthTest.class, VectorEqualsTests.class, VectorCloneTests.class,
-    VectorOperationsWithDoublesTests.class, VectorOperationsWithVectorsTests.class})
+    VectorOperationsWithDoublesTests.class, VectorOperationsWithVectorsTests.class,
+    VectorParamsConstructorsTests.class, VectorEmptyConstuctorTests.class})
 public class VectorTest {
 
     private Vector[] testVectors;
