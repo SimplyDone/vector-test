@@ -6,7 +6,7 @@ import org.junit.Test;
 
 /**
  *
- * @author Alex Zurad
+ * @author Alex Zurad, Robbie McDonnell
  */
 
 public class VectorDefaultConstuctorTest {
