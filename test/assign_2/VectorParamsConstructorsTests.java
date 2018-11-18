@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assign_2;
 
 import java.util.Arrays;
@@ -30,7 +26,7 @@ public class VectorParamsConstructorsTests {
             result[i] = test.getValue(i);
         }
         
-        assertArrayEquals(expected, result, 0);
+        assertArrayEquals("Vector created should equal expected.", expected, result, 0);
         
     }
     
@@ -47,7 +43,7 @@ public class VectorParamsConstructorsTests {
             result[i] = test.getValue(i);
         }
         
-        assertArrayEquals(expected, result, 0);
+        assertArrayEquals("Vector created should equal expected.", expected, result, 0);
         
     }
     
@@ -68,7 +64,7 @@ public class VectorParamsConstructorsTests {
             result[i] = test.getValue(i);
         }
         
-        assertArrayEquals(expected, result, 0);
+        assertArrayEquals("Vector created should equal expected.",expected, result, 0);
         
     }
 }
