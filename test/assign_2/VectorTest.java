@@ -20,12 +20,14 @@ import org.junit.runners.Suite.SuiteClasses;
  *
  * @author Alex Zurad.
  */
+
 @RunWith(Suite.class)
 @SuiteClasses({VectorGetValueTests.class, VectorExceptionTests.class,
     VectorEuclideanDistTests.class, VectorNormalizeTests.class,
     VectorLengthTest.class, VectorEqualsTests.class, VectorCloneTests.class,
     VectorOperationsWithDoublesTests.class, VectorOperationsWithVectorsTests.class,
-    VectorParamsConstructorsTests.class, VectorEmptyConstuctorTests.class})
+    VectorParamsConstructorsTests.class, VectorEmptyConstuctorTests.class, 
+    VectorSubVectorTests.class})
 public class VectorTest {
 
     private Vector[] testVectors;

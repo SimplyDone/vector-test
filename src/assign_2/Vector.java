@@ -7,6 +7,7 @@ import java.util.Arrays;
  *
  * @author Alex Zurad
  */
+
 public class Vector {
 
     private double[] elements;
