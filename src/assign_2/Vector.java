@@ -3,9 +3,9 @@ package assign_2;
 
 import java.util.Arrays;
 
-/** @version 1.0
+/** @version 3.0
  *
- * @author Alex Zurad
+ *  @author Alex Zurad
  */
 
 public class Vector {
@@ -13,21 +13,33 @@ public class Vector {
     private double[] elements;
 
     public Vector() {
+        this(1,0);
         
     }
 
     public Vector(int size, double d) throws IllegalArgumentException {
         
+        if (size <= 0){
+            throw new IllegalArgumentException("Vector size cannot be 0 or less.");
+        }
+        
+        elements = new double[size];
+        Arrays.fill(elements, d);
         
     }
 
     public Vector(double[] d) throws NullPointerException {
-       
-
+        
+        if (d == null){
+            throw new NullPointerException("Input array cannot be null!");
+        }
+        
+        elements = d.clone();
     }
 
     public Vector(int[] i) throws NullPointerException {
-
+        this(Arrays.stream(i).asDoubleStream().toArray());
+        
     }
     
     //append methods
@@ -50,11 +62,21 @@ public class Vector {
     }
 
     public Vector clone() {
-        return null;
+        return new Vector(elements);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Arrays.hashCode(this.elements);
+        return hash;
     }
 
     @Override
     public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
         if (obj == null) {
             return false;
         }
@@ -62,16 +84,19 @@ public class Vector {
             return false;
         }
         final Vector other = (Vector) obj;
+        if (!Arrays.equals(this.elements, other.elements)) {
+            return false;
+        }
         return true;
     }
 
 
     public int getLength() {//returns number of elements in this
-        return 0;
+        return elements.length;
     }
 
     public double getValue(int i) throws IndexOutOfBoundsException {//returns the value this[i]
-        return 0.0;
+        return elements[i];
     }
 
     public Vector add(Vector V) throws NullPointerException {//add this to V, returning a Vector the same size as this
