@@ -1,25 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file,choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assign_2;
 
 import java.util.Arrays;
 import java.util.Collection;
-import org.junit.After;
-import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
-import org.junit.Assume;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 /**
  *
- * @author MAGIKARP11
+ * @author Robbie and Alex
  */
 
 @RunWith(Parameterized.class)
@@ -61,7 +52,7 @@ public class VectorAppendDoubleArrayTest {
     @Test
     public void testAdd() {
 
-        assertEquals("appending an array of doubles must return expected results.",
+        assertEquals("Appending an array of doubles must return expected results.",
                 expectedResult, testVector.append(testValues));
     }
 }

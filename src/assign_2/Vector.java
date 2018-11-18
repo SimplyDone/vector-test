@@ -22,7 +22,7 @@ public class Vector {
     }
 
     public Vector(double[] d) throws NullPointerException {
-        
+       
 
     }
 
