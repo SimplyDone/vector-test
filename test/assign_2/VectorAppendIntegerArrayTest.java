@@ -22,6 +22,7 @@ import org.junit.runners.Parameterized;
  * @author MAGIKARP11
  */
 
+@RunWith(Parameterized.class)
 public class VectorAppendIntegerArrayTest {
     private final Vector testVector;
     private final int[] testValues;

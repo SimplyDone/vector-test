@@ -22,6 +22,7 @@ import org.junit.runners.Parameterized;
  * @author MAGIKARP11
  */
 
+@RunWith(Parameterized.class)
 public class VectorAppendDoubleArrayTest {
     private final Vector testVector;
     private final double[] testValues;
