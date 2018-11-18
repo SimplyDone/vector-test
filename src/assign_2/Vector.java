@@ -18,6 +18,7 @@ public class Vector {
 
     public Vector(int size, double d) throws IllegalArgumentException {
         
+        
     }
 
     public Vector(double[] d) throws NullPointerException {
