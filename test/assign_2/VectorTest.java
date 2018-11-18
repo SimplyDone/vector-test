@@ -52,17 +52,6 @@ public class VectorTest {
         testVectors = null;
     }
 
-    @Test
-    public void testDefaultConstructor() {
-
-        testVectors[0] = new Vector();
-        testVectors[1] = new Vector();
-
-        // vectors should be equal
-        assertEquals("The vectors should be equal.", true, testVectors[0].equals(testVectors[1]));
-
-    }
-
     // check if append result is not null
     // compare append base case -> appended cases
     // append somehting <-> null
