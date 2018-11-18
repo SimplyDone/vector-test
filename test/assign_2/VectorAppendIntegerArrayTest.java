@@ -1,6 +1,6 @@
 /*
  * To change this license header, choose License Headers in Project Properties.
- * To change this template file,choose Tools | Templates
+ * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package assign_2;
@@ -22,12 +22,12 @@ import org.junit.runners.Parameterized;
  * @author MAGIKARP11
  */
 
-public class VectorAppendDoubleArrayTest {
+public class VectorAppendIntegerArrayTest {
     private final Vector testVector;
-    private final double[] testValues;
+    private final int[] testValues;
     private final Vector expectedResult;
 
-    public VectorAppendDoubleArrayTest( Vector a, double[] b, Vector expected) {
+    public VectorAppendIntegerArrayTest( Vector a, int[] b, Vector expected) {
         testVector = a;
         testValues = b;
         expectedResult = expected;
@@ -41,26 +41,26 @@ public class VectorAppendDoubleArrayTest {
             new Vector(new double[]{4,5,6}),        // v[2]
             new Vector(new double[]{-2, -2, -3, 8, 66})};// v[3]
         
-        double d[][] = {new double[]{1},            //d[0]
-            new double[]{2,3},                      //d[1]
-            new double[]{4,5,6},                    //d[2]
-            new double[]{-2,-2,-3,8,66}};           //d[3]
+        int i[][] = {new int[]{1},            //d[0]
+            new int[]{2,3},                      //d[1]
+            new int[]{4,5,6},                    //d[2]
+            new int[]{-2,-2,-3,8,66}};           //d[3]
 
 
         return Arrays.asList(
                 new Object[][]{
-                    {v[0], d[1], new Vector(new double[]{1,2,3})}, 
-                    {v[1], d[0], new Vector(new double[]{2,3,1})}, 
-                    {v[1], d[2], new Vector(new double[]{2,3,4,5,6})},
-                    {v[1], d[3], new Vector(new double[]{2,3,-2,-2,-3,8,66})}, 
-                    {v[3], d[1], new Vector(new double[]{-2,-2,-3,8,66,2,3})}, 
+                    {v[0], i[1], new Vector(new double[]{1,2,3})},
+                    {v[1], i[0], new Vector(new double[]{2,3,1})}, 
+                    {v[1], i[2], new Vector(new double[]{2,3,4,5,6})}, 
+                    {v[1], i[3], new Vector(new double[]{2,3,-2,-2,-3,8,66})}, 
+                    {v[3], i[1], new Vector(new double[]{-2,-2,-3,8,66,2,3})},
                 });
     }
 
     @Test
     public void testAdd() {
 
-        assertEquals("appending an array of doubles must return expected results.",
+        assertEquals("appending an array of integers must return expected results.",
                 expectedResult, testVector.append(testValues));
     }
 }

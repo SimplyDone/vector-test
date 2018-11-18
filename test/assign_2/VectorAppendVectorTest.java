@@ -21,23 +21,16 @@ import org.junit.runners.Parameterized;
  *
  * @author MAGIKARP11
  */
-public class AppendVectorTest {
+public class VectorAppendVectorTest {
     private final Vector testVectorA;
     private final Vector testVectorB;
     private final Vector expectedResult;
 
-    public AppendVectorTest( Vector a, Vector b, Vector expected) {
+    public VectorAppendVectorTest( Vector a, Vector b, Vector expected) {
         testVectorA = a;
         testVectorB = b;
         expectedResult = expected;
     }
-    
-    // check if append result is not null
-    // compare append base case -> appended cases
-    // append somehting <-> null 
-    // different sized vectors
-    // compare appending both ways
-    // compare equivalent appends (intArrary and double Array)
     
     @Parameterized.Parameters
     public static Collection input() {
@@ -49,11 +42,11 @@ public class AppendVectorTest {
 
         return Arrays.asList(
                 new Object[][]{
-                    {v[0], v[1], new Vector(new double[]{1,2,3})}, // tests general case
-                    {v[1], v[0], new Vector(new double[]{2,3,1})}, // tests first vector as a zero vector
-                    {v[1], v[2], new Vector(new double[]{2,3,4,5,6})}, //tests second vector as a zero vector
-                    {v[1], v[3], new Vector(new double[]{2,3,-2,-2,-3,8,66})}, // tests second vecor with smaller size
-                    {v[3], v[1], new Vector(new double[]{-2,-2,-3,8,66,2,3})}, // tests first vecor with smaller size
+                    {v[0], v[1], new Vector(new double[]{1,2,3})},
+                    {v[1], v[0], new Vector(new double[]{2,3,1})}, 
+                    {v[1], v[2], new Vector(new double[]{2,3,4,5,6})}, 
+                    {v[1], v[3], new Vector(new double[]{2,3,-2,-2,-3,8,66})},
+                    {v[3], v[1], new Vector(new double[]{-2,-2,-3,8,66,2,3})}, 
                 });
     }
 
