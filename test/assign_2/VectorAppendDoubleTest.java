@@ -25,20 +25,13 @@ public class VectorAppendDoubleTest {
         testValue = b;
         expectedResult = expected;
     }
-    
-    // check if append result is not null
-    // compare append base case -> appended cases
-    // append somehting <-> null 
-    // different sized vectors
-    // compare appending both ways
-    // compare equivalent appends (intArrary and double Array)
-    
+
     @Parameterized.Parameters
     public static Collection input() {
 
-        Vector v[] = {new Vector(new double[]{1}),  // v[0]
-            new Vector(new double[]{2,3}),          // v[1]
-            new Vector(new double[]{-2, -2, -3, 8, 66})};// v[2]
+        Vector v[] = {new Vector(new double[]{1}),          // v[0]
+            new Vector(new double[]{2,3}),                  // v[1]
+            new Vector(new double[]{-2, -2, -3, 8, 66})};   // v[2]
 
         return Arrays.asList(
                 new Object[][]{
