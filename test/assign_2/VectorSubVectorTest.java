@@ -1,34 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assign_2;
 
 import java.util.Arrays;
 import java.util.Collection;
-import org.junit.After;
-import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
-import org.junit.Assume;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
 /**
  *
- * @author MAGIKARP11
+ * @author Alex Zurad, Robbie McDonnell
  */
 
 @RunWith(Parameterized.class)
-public class VectorSubVectorTests {
+public class VectorSubVectorTest {
     private final Vector testVector;
     private final Vector expectedResult;
     private final int r;
     private final int l;
 
-    public VectorSubVectorTests(Vector v, int a, int b, Vector expected) {
+    public VectorSubVectorTest(Vector v, int a, int b, Vector expected) {
         testVector = v;
         r = a;
         l = b;
@@ -56,7 +48,7 @@ public class VectorSubVectorTests {
     @Test
     public void testSubV() {
 
-        assertEquals("subV must return expected vector.",
+        assertEquals("Sub vector must return expected vector.",
                 expectedResult, testVector.subV(r,l));
     }
 }

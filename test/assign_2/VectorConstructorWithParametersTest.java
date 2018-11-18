@@ -2,20 +2,17 @@
 package assign_2;
 
 import java.util.Arrays;
-import org.junit.Assert;
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 
 /**
  *
- * @author Alex Zurad
+ * @author Alex Zurad, Robbie McDonnell
  */
-public class VectorParamsConstructorsTests {
+public class VectorConstructorWithParametersTest {
     
     @Test
-    public void testDoubleConstructor() {
+    public void testDoubleArrayConstructor() {
         
         double[] expected = {1,2,3,4,5};
         double[] result = new double[expected.length];
@@ -31,7 +28,7 @@ public class VectorParamsConstructorsTests {
     }
     
     @Test
-    public void testIntConstructor() {
+    public void testIntArrayConstructor() {
         
         int[] a = {1,2,3,4,5};
         double[] expected = Arrays.stream(a).asDoubleStream().toArray();

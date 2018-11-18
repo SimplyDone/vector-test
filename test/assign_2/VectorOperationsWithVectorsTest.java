@@ -1,28 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assign_2;
 
 import java.util.Arrays;
 import java.util.Collection;
-import org.junit.After;
-import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
 import org.junit.Assume;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 /**
  *
- * @author Alex Zurad
+ * @author Alex Zurad, Robbie McDonnell
  */
 @RunWith(Parameterized.class)
-public class VectorOperationsWithVectorsTests {
+public class VectorOperationsWithVectorsTest {
 
     private final Vector testVectorA;
     private final Vector testVectorB;
@@ -33,7 +25,7 @@ public class VectorOperationsWithVectorsTests {
     };
     private final Type currentType;
 
-    public VectorOperationsWithVectorsTests(Type c, Vector a, Vector b, Vector expected) {
+    public VectorOperationsWithVectorsTest(Type c, Vector a, Vector b, Vector expected) {
         testVectorA = a;
         testVectorB = b;
         expectedResult = expected;
@@ -91,7 +83,7 @@ public class VectorOperationsWithVectorsTests {
     public void testAdd() {
 
         Assume.assumeTrue(currentType == Type.ADD);
-        assertEquals("add must return expected results.",
+        assertEquals("Addition must return expected results.",
                 expectedResult, testVectorA.add(testVectorB));
     }
 
@@ -99,7 +91,7 @@ public class VectorOperationsWithVectorsTests {
     public void testSub() {
 
         Assume.assumeTrue(currentType == Type.SUB);
-        assertEquals("sub must return expected results.",
+        assertEquals("Subtract must return expected results.",
                 expectedResult, testVectorA.sub(testVectorB));
     }
 
@@ -107,7 +99,7 @@ public class VectorOperationsWithVectorsTests {
     public void testMult() {
 
         Assume.assumeTrue(currentType == Type.MULT);
-        assertEquals("mult must return expected results.",
+        assertEquals("Multiplication must return expected results.",
                 expectedResult, testVectorA.mult(testVectorB));
     }
 

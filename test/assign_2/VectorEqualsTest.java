@@ -19,13 +19,13 @@ import org.junit.runners.Parameterized;
  * @author Alex Zurad
  */
 @RunWith(Parameterized.class)
-public class VectorEqualsTests {
+public class VectorEqualsTest {
 
     private final Vector testVectorA;
     private final Vector testVectorB;
     private final boolean expectedResult;
 
-    public VectorEqualsTests(Vector a, Vector b, boolean expected) {
+    public VectorEqualsTest(Vector a, Vector b, boolean expected) {
         testVectorA = a;
         testVectorB = b;
         expectedResult = expected;
@@ -50,9 +50,9 @@ public class VectorEqualsTests {
 
         return Arrays.asList(
                 new Object[][]{
-                    {testVectors[0], expectedVectors[0], true}, //zero vector
-                    {testVectors[1], expectedVectors[1], false}, //general vector with no negative elements
-                    {testVectors[2], expectedVectors[2], false}, //general vector with all negative elements
+                    {testVectors[0], expectedVectors[0], true},
+                    {testVectors[1], expectedVectors[1], false}, 
+                    {testVectors[2], expectedVectors[2], false}, 
                     {testVectors[3], expectedVectors[3], true},
                 });
     }
