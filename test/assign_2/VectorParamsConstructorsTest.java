@@ -12,7 +12,7 @@ import org.junit.Test;
  *
  * @author Alex Zurad
  */
-public class VectorParamsConstructorsTests {
+public class VectorParamsConstructorsTest {
     
     @Test
     public void testDoubleConstructor() {

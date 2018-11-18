@@ -12,7 +12,7 @@ import org.junit.Test;
  * @author Alex Zurad
  */
 
-public class VectorExceptionTests {
+public class VectorExceptionTest {
     
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetValueOutOfBoundsExceptionUnder() {

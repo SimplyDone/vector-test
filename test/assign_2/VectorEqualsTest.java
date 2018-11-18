@@ -19,13 +19,13 @@ import org.junit.runners.Parameterized;
  * @author Alex Zurad
  */
 @RunWith(Parameterized.class)
-public class VectorEqualsTests {
+public class VectorEqualsTest {
 
     private final Vector testVectorA;
     private final Vector testVectorB;
     private final boolean expectedResult;
 
-    public VectorEqualsTests(Vector a, Vector b, boolean expected) {
+    public VectorEqualsTest(Vector a, Vector b, boolean expected) {
         testVectorA = a;
         testVectorB = b;
         expectedResult = expected;

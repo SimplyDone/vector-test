@@ -21,12 +21,12 @@ import org.junit.runners.Parameterized;
  * @author Alex Zurad
  */
 @RunWith(Parameterized.class)
-public class VectorEuclideanDistTests {
+public class VectorEuclideanDistTest {
     private final Vector testVectorA;
     private final Vector testVectorB;
     private final double expectedResult;
     
-    public VectorEuclideanDistTests(Vector a, Vector b, double expected ){
+    public VectorEuclideanDistTest(Vector a, Vector b, double expected ){
         testVectorA = a;
         testVectorB = b;
         expectedResult = expected;

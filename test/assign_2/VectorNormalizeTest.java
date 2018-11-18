@@ -17,12 +17,12 @@ import org.junit.runners.Parameterized;
  * @author Alex Zurad
  */
 @RunWith(Parameterized.class)
-public class VectorNormalizeTests {
+public class VectorNormalizeTest {
 
     private final Vector testVector;
     private final Vector expectedResult;
 
-    public VectorNormalizeTests(Vector a, Vector expected) {
+    public VectorNormalizeTest(Vector a, Vector expected) {
         testVector = a;
         expectedResult = expected;
     }

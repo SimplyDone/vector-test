@@ -12,7 +12,7 @@ import org.junit.Test;
  *
  * @author Alex Zurad
  */
-public class VectorLengthTests {
+public class VectorLengthTest {
 
     @Test
     public void testVectorLengthOf1() {

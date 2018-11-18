@@ -22,13 +22,13 @@ import org.junit.runners.Parameterized;
  */
 
 @RunWith(Parameterized.class)
-public class VectorSubVectorTests {
+public class VectorSubVectorTest {
     private final Vector testVector;
     private final Vector expectedResult;
     private final int r;
     private final int l;
 
-    public VectorSubVectorTests(Vector v, int a, int b, Vector expected) {
+    public VectorSubVectorTest(Vector v, int a, int b, Vector expected) {
         testVector = v;
         r = a;
         l = b;

@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
  *
  * @author Alex Zurad
  */
-public class VectorCloneTests {
+public class VectorCloneTest {
 
     @Test
     public void testCloneNotNull() {

@@ -21,12 +21,12 @@ import org.junit.runners.Parameterized;
  * @author Alex Zurad
  */
 @RunWith(Parameterized.class)
-public class VectorGetValueTests {
+public class VectorGetValueTest {
     private final Vector testVector;
     private final int testValue;
     private final double expectedResult;
     
-    public VectorGetValueTests(Vector a, int val, double expected ){
+    public VectorGetValueTest(Vector a, int val, double expected ){
         testVector = a;
         testValue = val;
         expectedResult = expected;

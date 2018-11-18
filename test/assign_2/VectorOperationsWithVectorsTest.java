@@ -22,7 +22,7 @@ import org.junit.runners.Parameterized;
  * @author Alex Zurad
  */
 @RunWith(Parameterized.class)
-public class VectorOperationsWithVectorsTests {
+public class VectorOperationsWithVectorsTest {
 
     private final Vector testVectorA;
     private final Vector testVectorB;
@@ -33,7 +33,7 @@ public class VectorOperationsWithVectorsTests {
     };
     private final Type currentType;
 
-    public VectorOperationsWithVectorsTests(Type c, Vector a, Vector b, Vector expected) {
+    public VectorOperationsWithVectorsTest(Type c, Vector a, Vector b, Vector expected) {
         testVectorA = a;
         testVectorB = b;
         expectedResult = expected;

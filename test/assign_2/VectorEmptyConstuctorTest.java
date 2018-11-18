@@ -14,7 +14,7 @@ import org.junit.Test;
  */
 
 //add to vector test suite
-public class VectorEmptyConstuctorTests {
+public class VectorEmptyConstuctorTest {
     
     @Test
     public void testEmptyConstructorNotNull() {
