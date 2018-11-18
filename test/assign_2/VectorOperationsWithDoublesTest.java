@@ -1,25 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assign_2;
 
 import java.util.Arrays;
 import java.util.Collection;
-import org.junit.After;
-import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
 import org.junit.Assume;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 /**
  *
- * @author Alex Zurad
+ * @author Alex Zurad, Robbie McDonnell
  */
 @RunWith(Parameterized.class)
 public class VectorOperationsWithDoublesTest {
@@ -47,7 +39,6 @@ public class VectorOperationsWithDoublesTest {
             new Vector(new double[]{1, 2}), // v[1]
             new Vector(new double[]{3, 4}), // v[2]
             new Vector(new double[]{-5, -1}), // v[3]
-
             new Vector(new double[]{1, 1, 1}), // v[4]
             new Vector(new double[]{-2, 2, -3, 8, 11})};// v[5]
 

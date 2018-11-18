@@ -1,18 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assign_2;
 
 import org.junit.Test;
 
 /**
  *
- * @author Alex Zurad
+ * @author Alex Zurad, Robbie McDonnell
  */
 
 public class VectorExceptionTest {
+    
+    //getValue
     
     @Test(expected = IndexOutOfBoundsException.class)
     public void testGetValueOutOfBoundsExceptionUnder() {
@@ -28,6 +26,8 @@ public class VectorExceptionTest {
         a.getValue(6);
         
     }
+    
+    //euclideanDist
 
     @Test(expected = NullPointerException.class)
     public void testEuclidianDistanceException() {
@@ -37,6 +37,8 @@ public class VectorExceptionTest {
 
         a.EuclidianDistance(b);
     }
+    
+    //constructors
     
     @Test(expected = IllegalArgumentException.class)
     public void testSizeInitialConstuctorIllegalArgumentException() {
@@ -73,14 +75,33 @@ public class VectorExceptionTest {
         Vector a = new Vector(array);    
     }
     
+    // operations
+    
     @Test(expected = NullPointerException.class)
-    public void testOperationsWithVectorsNullPointerException() {
+    public void testAddWithVectorNullPointerException() {
         
         Vector a = new Vector();
         Vector b = null;
         a.add(b);
-        
     }
+    
+    @Test(expected = NullPointerException.class)
+    public void testMultWithVectorNullPointerException() {
+        
+        Vector a = new Vector();
+        Vector b = null;
+        a.mult(b);
+    }
+    
+    @Test(expected = NullPointerException.class)
+    public void testSubWithVectorNullPointerException() {
+        
+        Vector a = new Vector();
+        Vector b = null;
+        a.sub(b);
+    }
+    
+    //subVector
     
     @Test(expected = IndexOutOfBoundsException.class)
     public void testSubVectorOutOfBoundsExceptionLeftUnder() {
@@ -110,9 +131,13 @@ public class VectorExceptionTest {
         a.subV(l,r);
     }
     
-    
-    
-    
-    
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testSubVectorOutOfBoundsExceptionRightOver() {
+        
+        Vector a = new Vector(new double[]{1, 2, 3, 4, 5, 9});
+        int l = 0;
+        int r = a.getLength();
+        a.subV(l,r);
+    }
 
 }

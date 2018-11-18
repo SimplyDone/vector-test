@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assign_2;
 
-import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
+/** 
  *
  * @author Alex Zurad
  */
@@ -21,7 +17,7 @@ public class VectorCloneTest {
         Vector a = new Vector(new double[] {1,2,3});
         Vector b = a.clone();
         
-        assertNotNull(b);
+        assertNotNull("The cloned vector should not be null.",b);
     }
     
     @Test
@@ -32,6 +28,6 @@ public class VectorCloneTest {
         
         a.add(1);
         
-        assertNotEquals("The vectors should not be equal.", a, b );
+        assertNotEquals("Modifing the original vector should not affect its clone.", a, b );
     }
 }
