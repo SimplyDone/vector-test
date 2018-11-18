@@ -110,7 +110,30 @@ public class VectorExceptionTests {
         a.subV(l,r);
     }
     
-    
+    @Test(expected = NullPointerException.class)
+    public void testAppendVectorException() {
+        
+        Vector a = new Vector();
+        Vector b = null;
+        a.append(b);
+        
+    }
+    @Test(expected = NullPointerException.class)
+    public void testAppendDoubleArrayException() {
+        
+        Vector a = new Vector();
+        double[] b = null;
+        a.append(b);
+        
+    }
+    @Test(expected = NullPointerException.class)
+    public void testAppendIntegerArrayException() {
+        
+        Vector a = new Vector();
+        int[] b = null;
+        a.append(b);
+        
+    }
     
     
     

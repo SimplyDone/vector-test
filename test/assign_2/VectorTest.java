@@ -56,7 +56,7 @@ public class VectorTest {
 
     // check if append result is not null
     // compare append base case -> appended cases
-    // append somehting <-> null
+    // append somehting <-> null 
     // different sized vectors
     // append 0 -> 0
     // append something <-> 0
