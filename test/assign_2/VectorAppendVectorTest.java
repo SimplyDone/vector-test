@@ -21,6 +21,8 @@ import org.junit.runners.Parameterized;
  *
  * @author MAGIKARP11
  */
+
+@RunWith(Parameterized.class)
 public class VectorAppendVectorTest {
     private final Vector testVectorA;
     private final Vector testVectorB;

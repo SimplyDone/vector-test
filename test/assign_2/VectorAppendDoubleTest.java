@@ -22,10 +22,12 @@ import org.junit.runners.Parameterized;
  * @author MAGIKARP11
  */
 
+@RunWith(Parameterized.class)
 public class VectorAppendDoubleTest {
     private final Vector testVector;
     private final double testValue;
     private final Vector expectedResult;
+
 
     public VectorAppendDoubleTest( Vector a, double b, Vector expected) {
         testVector = a;
