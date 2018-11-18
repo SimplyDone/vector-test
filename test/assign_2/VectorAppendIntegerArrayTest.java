@@ -41,10 +41,10 @@ public class VectorAppendIntegerArrayTest {
             new Vector(new double[]{4,5,6}),        // v[2]
             new Vector(new double[]{-2, -2, -3, 8, 66})};// v[3]
         
-        int i[][] = {new int[]{1},            //d[0]
-            new int[]{2,3},                      //d[1]
-            new int[]{4,5,6},                    //d[2]
-            new int[]{-2,-2,-3,8,66}};           //d[3]
+        int i[][] = {{1},            //d[0]
+            {2,3},                      //d[1]
+            {4,5,6},                    //d[2]
+            {-2,-2,-3,8,66}};           //d[3]
 
 
         return Arrays.asList(
