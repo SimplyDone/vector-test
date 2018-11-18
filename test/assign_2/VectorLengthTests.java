@@ -12,19 +12,23 @@ import org.junit.Test;
  *
  * @author Alex Zurad
  */
-public class VectorLengthTest {
+public class VectorLengthTests {
 
     @Test
     public void testVectorLengthOf1() {
         
-        assertEquals("Vector should be of length 1.", 1, (new Vector()).getLength());
+        int expected = 1;
+        
+        assertEquals("Vector should be of length 1.", expected, (new Vector()).getLength());
 
     }
     
     @Test
     public void testVectorLengthOf50() {
         
-        assertEquals("Vector should be of length 50.", 50, (new Vector(50,1)).getLength());
+        int expected = 50;
+        
+        assertEquals("Vector should be of length 50.", expected, (new Vector(50,1)).getLength());
 
     }
 
