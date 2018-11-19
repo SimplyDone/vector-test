@@ -10,7 +10,7 @@ import org.junit.runners.Parameterized;
 
 /**
  *
- * @author Alex Zurad
+ * @author Alex Zurad, Robbie McDonnell
  */
 @RunWith(Parameterized.class)
 public class VectorEuclideanDistTest {
