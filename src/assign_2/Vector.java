@@ -127,8 +127,6 @@ public class Vector {
         return vectorSum;
     }
 
-    }
-
     public Vector sub(Vector V) throws NullPointerException {//sub this – V
         return null;
     }

@@ -26,7 +26,7 @@ public class VectorCloneTest {
         Vector a = new Vector(new double[] {1,2,3});
         Vector b = a.clone();
         
-        a.add(1);
+        a = a.add(1);
         
         assertNotEquals("Modifing the original vector should not affect its clone.", a, b );
     }
