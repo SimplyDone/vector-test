@@ -45,19 +45,29 @@ public class Vector {
 
     //append methods
     public Vector append(double[] doubleArray) throws NullPointerException {
-        return null;
+        
+        return append(new Vector(doubleArray));
     }
 
     public Vector append(int[] intArray) throws NullPointerException {
-        return null;
+        return append(new Vector(intArray));
     }
 
-    public Vector append(Vector V) throws NullPointerException {
-        return null;
+    public Vector append(Vector v) throws NullPointerException {
+        
+        Vector appended = new Vector(this.getLength() + v.getLength(), 0.0);
+        
+        appended = appended.add(this);
+        
+        for(int i = this.getLength(); i<appended.getLength(); i++){
+            appended.elements[i] = v.elements[i-this.getLength()];
+        }
+        
+        return appended;
     }
 
     public Vector append(double aDouble) {
-        return null;
+        return append(new Vector(1, aDouble));
 
     }
 
