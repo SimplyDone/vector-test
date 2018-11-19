@@ -2,11 +2,11 @@ package assign_2;
 
 import java.util.Arrays;
 
-/**
- * @version 3.0
- *
- * @author Alex Zurad, Robbie McDonnell
+/** @version 4.0
+ * 
+ *  @author Alex Zurad, Robbie McDonnell
  */
+
 public class Vector {
 
     private double[] elements;
@@ -152,7 +152,7 @@ public class Vector {
     }
 
     public Vector subV(int l, int r) throws IndexOutOfBoundsException {//will return a sub vector between the
-        
+
         int lower = Math.min(l, r);
         int diff = Math.abs(l-r);
         
