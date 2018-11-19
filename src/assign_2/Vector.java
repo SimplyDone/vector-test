@@ -102,18 +102,19 @@ public class Vector {
     public Vector add(Vector v) throws NullPointerException {//add this to V, returning a Vector the same size as this
         
         int len = this.getLength();
+        
         Vector vectorSum = new Vector(len,0.0);
         
         for(int q = 0; q < len; q++){
             vectorSum.elements[q] += this.elements[q];
         }
         
-        if(len > v.getLength())
+        if(len >= v.getLength())
             len = v.getLength();
         
-        for(int w = 0; w < len; w++)
+        for(int w = 0; w < len; w++){
             vectorSum.elements[w] += v.elements[w];
-        
+        }        
         return vectorSum;
     }
 
@@ -123,7 +124,7 @@ public class Vector {
         Vector vectorSum = new Vector(len, 0.0);
         
         for(int q = 0; q <len; q++)
-            vectorSum.elements[q] += aDouble;
+            vectorSum.elements[q] = aDouble + this.elements[q];
         
         return vectorSum;
     }

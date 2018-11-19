@@ -47,7 +47,7 @@ public class VectorOperationsWithDoublesTest {
                     {Type.ADD, v[1], 4.0, new Vector(new double[]{5, 6})}, // tests general case
                     {Type.ADD, v[2], 0.0, v[2]}, // tests double as 0.0
                     {Type.ADD, v[0], 3.0, new Vector(new double[]{3, 3})}, //tests vector as 0 vector
-                    {Type.ADD, v[1], -4.0, new Vector(new double[]{-2, -1})}, //tests with negative double
+                    {Type.ADD, v[1], -4.0, new Vector(new double[]{-3, -2})}, //tests with negative double
                     {Type.ADD, v[3], 2.0, new Vector(new double[]{-3, 1})}, // tests with negative elements in the vector
                     {Type.ADD, v[5], 8.0, new Vector(new double[]{6, 10, 5, 16, 19})}, // tests a complex problem with several cases
 
