@@ -63,16 +63,38 @@ public class Vector {
         this(Arrays.stream(i).asDoubleStream().toArray());
 
     }
-
-    public Vector append(double[] doubleArray) throws NullPointerException {
+  
+    
+    /** Appends an array of doubles to the end of this Vector
+     * 
+     * @param doubleArray The double array
+     * @return an appended Vector
+     * @throws NullPointerException when the double array is null
+     * @throws IllegalArgumentException when the double array is empty
+     */
+    public Vector append(double[] doubleArray) throws NullPointerException, IllegalArgumentException {
         
         return append(new Vector(doubleArray));
     }
 
-    public Vector append(int[] intArray) throws NullPointerException {
+    
+    /** Appends an array of integers to hte end of this vector
+     * 
+     * @param intArray The integer array
+     * @return an appended Vector
+     * @throws NullPointerException if the integer array is null
+     * @throws IllegalArgumentException if the integer array is empty
+     */
+    public Vector append(int[] intArray) throws NullPointerException, IllegalArgumentException {
         return append(new Vector(intArray));
     }
 
+    /** Appends a Vector to this Vector
+     * 
+     * @param v the Vector
+     * @return and appended Vector
+     * @throws NullPointerException if the vector v is null
+     */
     public Vector append(Vector v) throws NullPointerException {
         
         Vector appended = new Vector(this.getLength() + v.getLength(), 0.0);
@@ -86,6 +108,11 @@ public class Vector {
         return appended;
     }
 
+    /** Appends a single double to a vector
+     * 
+     * @param aDouble the double
+     * @return an appended vector
+     */
     public Vector append(double aDouble) {
         return append(new Vector(1, aDouble));
 
@@ -142,6 +169,12 @@ public class Vector {
         return elements[i];
     }
 
+    /** Adds two vectors together to the size of this vector
+     * 
+     * @param v the Vector being added
+     * @return the sum of both Vectors
+     * @throws NullPointerException if Vector v is null
+     */
     public Vector add(Vector v) throws NullPointerException {//add this to V, returning a Vector the same size as this
 
         int len = this.getLength();
@@ -162,6 +195,11 @@ public class Vector {
         return vectorSum;
     }
 
+    /** Adds a double to every element in this vector
+     * 
+     * @param aDouble the double value
+     * @return the sum of the vector and double
+     */
     public Vector add(double aDouble) { //add aDouble to every element of this
 
         int len = this.getLength();
@@ -175,6 +213,12 @@ public class Vector {
     }
 
 
+    /** Subtracts two vectors from one another
+     * 
+     * @param v the Vector that will subtract from another Vector
+     * @return the result of subtracting v from this Vector
+     * @throws NullPointerException if the Vector v is null
+     */
     public Vector sub(Vector v) throws NullPointerException {//sub this – V
 
         int len = this.getLength();
