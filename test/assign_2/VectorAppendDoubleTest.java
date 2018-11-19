@@ -10,7 +10,7 @@ import org.junit.runners.Parameterized;
 
 /**
  *
- * @author Robbie and Alex
+ * @author Robbie McDonnell, Alex Zurad
  */
 
 @RunWith(Parameterized.class)

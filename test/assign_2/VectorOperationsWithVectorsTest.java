@@ -56,7 +56,7 @@ public class VectorOperationsWithVectorsTest {
                     {Type.ADD, v[5], v[0], new Vector(new double[]{7, 8})}, //tests second vector as a zero vector
                     {Type.ADD, v[6], v[7], new Vector(new double[]{2, -1})}, //tests negative values as elements
                     {Type.ADD, v[1], v[3], new Vector(new double[]{4, 2})}, // tests second vecor with smaller size
-                    {Type.ADD, v[3], v[1], new Vector(new double[]{5})}, // tests first vecor with smaller size
+                    {Type.ADD, v[3], v[1], new Vector(new double[]{4})}, // tests first vecor with smaller size
                     {Type.ADD, v[11], v[12], new Vector(new double[]{-3, -2, 1, 2})}, // tests a complex question with several cases
 
                     {Type.SUB, v[2], v[0], new Vector(new double[]{2, 2})}, // tests general case
