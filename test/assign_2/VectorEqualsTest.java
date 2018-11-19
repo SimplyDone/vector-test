@@ -44,9 +44,13 @@ public class VectorEqualsTest {
 
         return Arrays.asList(
                 new Object[][]{
+                    //Tests if two generic vectors are equal
                     {testVectors[0], expectedVectors[0], true},
-                    {testVectors[1], expectedVectors[1], false}, 
+                    //Tests if two generic vectors are not equal
+                    {testVectors[1], expectedVectors[1], false},
+                    //Tests if a vector is equal to null
                     {testVectors[2], expectedVectors[2], false}, 
+                    //Tests if a vector is equal to its clone
                     {testVectors[3], expectedVectors[3], true},
                 });
     }
