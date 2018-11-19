@@ -140,6 +140,7 @@ public class VectorExceptionTest {
         a.append(b);
 
     }
+    
 
     @Test(expected = NullPointerException.class)
     public void testAppendDoubleArrayException() {

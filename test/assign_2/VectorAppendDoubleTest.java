@@ -35,9 +35,9 @@ public class VectorAppendDoubleTest {
 
         return Arrays.asList(
                 new Object[][]{
-                    {v[0], 1.5, new Vector(new double[]{1,1.5})}, 
-                    {v[1], -1.5, new Vector(new double[]{2,3,-1.5})}, 
-                    {v[2], -100, new Vector(new double[]{-2,-2,-3,8,66,-100})},
+                    {v[0], 1.5, new Vector(new double[]{1,1.5})}, //tests appending to a single element vector
+                    {v[1], -1.5, new Vector(new double[]{2,3,-1.5})}, //tests appending to a multi element vector
+                    {v[2], -100, new Vector(new double[]{-2,-2,-3,8,66,-100})},//test appending to a large vector
                   });
     }
 

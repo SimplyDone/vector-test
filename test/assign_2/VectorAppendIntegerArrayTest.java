@@ -41,11 +41,11 @@ public class VectorAppendIntegerArrayTest {
 
         return Arrays.asList(
                 new Object[][]{
-                    {v[0], i[1], new Vector(new double[]{1,2,3})},
-                    {v[1], i[0], new Vector(new double[]{2,3,1})}, 
-                    {v[1], i[2], new Vector(new double[]{2,3,4,5,6})}, 
-                    {v[1], i[3], new Vector(new double[]{2,3,-2,-2,-3,8,66})}, 
-                    {v[3], i[1], new Vector(new double[]{-2,-2,-3,8,66,2,3})},
+                    {v[0], i[1], new Vector(new double[]{1,2,3})}, // tests multiple elements in a vector appended to one integer
+                    {v[1], i[0], new Vector(new double[]{2,3,1})}, // tests one element appended to multiple integers
+                    {v[1], i[2], new Vector(new double[]{2,3,4,5,6})}, // tests a generic multi elements append
+                    {v[1], i[3], new Vector(new double[]{2,3,-2,-2,-3,8,66})}, // tests appending a large set of integers
+                    {v[3], i[1], new Vector(new double[]{-2,-2,-3,8,66,2,3})}, // tests appending integers to a large vector 
                 });
     }
 

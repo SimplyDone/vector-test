@@ -54,7 +54,7 @@ public class VectorOperationsWithDoublesTest {
                     {Type.MULT, v[1], 4.0, new Vector(new double[]{4, 8})}, // tests general case
                     {Type.MULT, v[2], 0.0, new Vector(new double[]{0, 0})}, // tests double as 0.0
                     {Type.MULT, v[0], 3.0, new Vector(new double[]{0, 0})}, // tests vector as 0 vector
-                    {Type.MULT, v[1], -4.0, new Vector(new double[]{-4, -8})}, //tests with negative double
+                    {Type.MULT, v[1], -4.0, new Vector(new double[]{-4, -8})}, //tests with negative doubles
                     {Type.MULT, v[3], 2.0, new Vector(new double[]{-10, -2})}, // tests with negative elements in vector
                     {Type.MULT, v[4], 5.0, new Vector(new double[]{5, 5, 5})}, // tests with all elements in the vector equal to 1
                     {Type.MULT, v[2], 1.0, v[2]}, //tests with the double equal to 1
