@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /** @version 3.0
  *
- *  @author Alex Zurad
+ *  @author Alex Zurad, Robbie McDonnell
  */
 
 public class Vector {
@@ -99,12 +99,33 @@ public class Vector {
         return elements[i];
     }
 
-    public Vector add(Vector V) throws NullPointerException {//add this to V, returning a Vector the same size as this
-        return null;
+    public Vector add(Vector v) throws NullPointerException {//add this to V, returning a Vector the same size as this
+        
+        int len = this.getLength();
+        Vector vectorSum = new Vector(len,0.0);
+        
+        for(int q = 0; q < len; q++){
+            vectorSum.elements[q] += this.elements[q];
+        }
+        
+        if(len > v.getLength())
+            len = v.getLength();
+        
+        for(int w = 0; w < len; w++)
+            vectorSum.elements[w] += v.elements[w];
+        
+        return vectorSum;
     }
 
     public Vector add(double aDouble)  { //add aDouble to every element of this
-        return null;
+        
+        int len = this.getLength();
+        Vector vectorSum = new Vector(len, 0.0);
+        
+        for(int q = 0; q <len; q++)
+            vectorSum.elements[q] += aDouble;
+        
+        return vectorSum;
     }
 
     public Vector sub(Vector V) throws NullPointerException {//sub this – V
