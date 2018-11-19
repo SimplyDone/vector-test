@@ -11,11 +11,20 @@ public class Vector {
 
     private double[] elements;
 
+    /**
+     *  Creates a vector of size 1 with an initial value of 0.
+     */
     public Vector() {
         this(1, 0);
 
     }
 
+    /** Creates a vector with a specified size and initial value
+     * 
+     * @param size The size of the vector
+     * @param d The value of every element in the vector
+     * @throws IllegalArgumentException When size <= 0
+     */
     public Vector(int size, double d) throws IllegalArgumentException {
 
         if (size <= 0) {
@@ -27,6 +36,12 @@ public class Vector {
 
     }
 
+    /** Creates a vector from an array of doubles.
+     * 
+     * @param d The double array
+     * @throws NullPointerException When array is null
+     * @throws IllegalArgumentException When length of array is 0
+     */
     public Vector(double[] d) throws NullPointerException, IllegalArgumentException {
 
         if (d == null) {
@@ -38,12 +53,17 @@ public class Vector {
         elements = d.clone();
     }
 
+    /** Creates a vector from an array of integers.
+     * 
+     * @param i The integer array
+     * @throws NullPointerException When array is null
+     * @throws IllegalArgumentException When length of array is 0
+     */
     public Vector(int[] i) throws NullPointerException, IllegalArgumentException {
         this(Arrays.stream(i).asDoubleStream().toArray());
 
     }
 
-    //append methods
     public Vector append(double[] doubleArray) throws NullPointerException {
         return null;
     }
