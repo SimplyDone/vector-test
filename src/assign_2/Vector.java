@@ -78,7 +78,7 @@ public class Vector {
     }
 
     
-    /** appends an array of integers to hte end of this vector
+    /** Appends an array of integers to hte end of this vector
      * 
      * @param intArray The integer array
      * @return an appended Vector
@@ -108,7 +108,7 @@ public class Vector {
         return appended;
     }
 
-    /** appends a single double to a vector
+    /** Appends a single double to a vector
      * 
      * @param aDouble the double
      * @return an appended vector
@@ -117,7 +117,11 @@ public class Vector {
         return append(new Vector(1, aDouble));
 
     }
-
+    
+    /** Returns a clone of this vector.
+     * 
+     * @return A clone of this
+     */
     public Vector clone() {
         return new Vector(elements);
     }
@@ -147,15 +151,25 @@ public class Vector {
         return true;
     }
 
+    /** Returns the numbers of elements in the vector.
+     * 
+     * @return The number of elements in the vector.
+     */
     public int getLength() {//returns number of elements in this
         return elements.length;
     }
 
+    /** This method returns the value at the provided index.
+     * 
+     * @param i The index
+     * @return The value at the index
+     * @throws IndexOutOfBoundsException 
+     */
     public double getValue(int i) throws IndexOutOfBoundsException {//returns the value this[i]
         return elements[i];
     }
 
-    /** adds two vectors together to the size of this vector
+    /** Adds two vectors together to the size of this vector
      * 
      * @param v the Vector being added
      * @return the sum of both Vectors
@@ -181,7 +195,7 @@ public class Vector {
         return vectorSum;
     }
 
-    /** adds a double to every element in this vector
+    /** Adds a double to every element in this vector
      * 
      * @param aDouble the double value
      * @return the sum of the vector and double
@@ -198,7 +212,8 @@ public class Vector {
         return vectorSum;
     }
 
-    /** subtracts two vectors from one another
+
+    /** Subtracts two vectors from one another
      * 
      * @param v the Vector that will subtract from another Vector
      * @return the result of subtracting v from this Vector
@@ -225,6 +240,13 @@ public class Vector {
 
     }
 
+    /** Creates a sub-vector of elements between l and r.
+     * 
+     * @param l Left index of sub-vector
+     * @param r Right index of sub-vector
+     * @return A sub-vector of this between l r
+     * @throws IndexOutOfBoundsException 
+     */
     public Vector subV(int l, int r) throws IndexOutOfBoundsException {//will return a sub vector between the
 
         int lower = Math.min(l, r);
@@ -241,6 +263,12 @@ public class Vector {
         return new Vector(d);
     }
 
+    /** Multiplies all elements of this by all elements of v
+     * 
+     * @param v A vector to multiply with
+     * @return A new vector of this multiplied by v
+     * @throws NullPointerException When v is null
+     */
     public Vector mult(Vector v) throws NullPointerException {//Multiple every element of this by corresponding element in V
 
         int len = this.getLength();
@@ -264,6 +292,11 @@ public class Vector {
         return vectorMult;
     }
 
+    /** Multiplies all elements of this by a double.
+     * 
+     * @param aDouble A double to multiply with
+     * @return A new vector with the elements multiplied by aDouble
+     */
     public Vector mult(double aDouble) {//Multiply every element of this by aDouble
 
         int len = this.getLength();
@@ -277,6 +310,10 @@ public class Vector {
 
     }
 
+    /** Creates a normalized vector of this and returns it.
+     * 
+     * @return A normalized vector of this
+     */
     public Vector Normalize() {//returns this as a normalized vector
 
         double[] newElements = new double[elements.length];
@@ -309,6 +346,13 @@ public class Vector {
 
     }
 
+    /** Computes the Euclidean distance between this and v. If v is smaller than
+     * this then it is extended with zeros.
+     * 
+     * @param v Vector to compute Euclidean distance to.
+     * @return The distance between the vectors.
+     * @throws NullPointerException When v is null
+     */
     public double EuclidianDistance(Vector v) throws NullPointerException {//returns the Euclidian distance between this and V.
 
         if (v == null) {

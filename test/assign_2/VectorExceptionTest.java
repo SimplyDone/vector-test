@@ -132,8 +132,9 @@ public class VectorExceptionTest {
         a.subV(l, r);
     }
 
+    //appends
     @Test(expected = NullPointerException.class)
-    public void testAppendVectorException() {
+    public void testAppendVectorNullPointerException() {
 
         Vector a = new Vector();
         Vector b = null;
@@ -143,7 +144,7 @@ public class VectorExceptionTest {
     
 
     @Test(expected = NullPointerException.class)
-    public void testAppendDoubleArrayException() {
+    public void testAppendDoubleArrayNullPointerException() {
 
         Vector a = new Vector();
         double[] b = null;
@@ -152,12 +153,41 @@ public class VectorExceptionTest {
     }
 
     @Test(expected = NullPointerException.class)
-    public void testAppendIntegerArrayException() {
+    public void testAppendIntegerArrayNullPointerException() {
 
         Vector a = new Vector();
         int[] b = null;
         a.append(b);
 
     }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testAppendVectorIllegalArgumentException() {
+
+        Vector a = new Vector();
+        Vector b = new Vector(new double[]{});
+        a.append(b);
+
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAppendDoubleArrayIllegalArgumentException() {
+
+        Vector a = new Vector();
+        double[] b = {};
+        a.append(b);
+
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAppendIntegerArrayIllegalArgumentException() {
+
+        Vector a = new Vector();
+        int[] b = {};
+        a.append(b);
+
+    }
+    
+    
 
 }
