@@ -1,10 +1,10 @@
-
 package assign_2;
 
 import java.util.Arrays;
 import java.util.Collection;
 import static org.junit.Assert.assertEquals;
 import org.junit.Assume;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -58,24 +58,27 @@ public class VectorOperationsWithDoublesTest {
                     {Type.MULT, v[3], 2.0, new Vector(new double[]{-10, -2})}, // tests with negative elements in vector
                     {Type.MULT, v[4], 5.0, new Vector(new double[]{5, 5, 5})}, // tests with all elements in the vector equal to 1
                     {Type.MULT, v[2], 1.0, v[2]}, //tests with the double equal to 1
-                    {Type.MULT, v[5], 8.0, new Vector(new double[]{-16, 16, -24, -64, 88})} // tests a complex question with several cases
+                    {Type.MULT, v[5], 8.0, new Vector(new double[]{-16, 16, -24, 64, 88})} // tests a complex question with several cases
                 });
     }
 
     @Test
     public void testAdd() {
 
-        Assume.assumeTrue(currentType == Type.ADD);
-        assertEquals("add must return expected results.",
-                expectedResult, testVectorA.add(testValueB));
+        if (currentType == Type.ADD) {
+            assertEquals("add must return expected results.",
+                    expectedResult, testVectorA.add(testValueB));
+        }
+
     }
 
     @Test
     public void testMult() {
 
-        Assume.assumeTrue(currentType == Type.MULT);
-        assertEquals("mult must return expected results.",
-                expectedResult, testVectorA.mult(testValueB));
+        if (currentType == Type.MULT) {
+            assertEquals("mult must return expected results.",
+                    expectedResult, testVectorA.mult(testValueB));
+        }
     }
 
 }

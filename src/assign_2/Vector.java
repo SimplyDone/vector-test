@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 
 /** @version 3.0
- *
+ * 
  *  @author Alex Zurad, Robbie McDonnell
  */
 
@@ -126,11 +126,26 @@ public class Vector {
         
         return vectorSum;
     }
+    
 
-    }
-
-    public Vector sub(Vector V) throws NullPointerException {//sub this – V
-        return null;
+    public Vector sub(Vector v) throws NullPointerException {//sub this – V
+        
+        int len = this.getLength();
+        
+        Vector vectorSub = new Vector(len,0.0);
+        
+        for(int q = 0; q < len; q++){
+            vectorSub.elements[q] += this.elements[q];
+        }
+        
+        if(len >= v.getLength())
+            len = v.getLength();
+        
+        for(int w = 0; w < len; w++){
+            vectorSub.elements[w] -= v.elements[w];
+        }        
+        return vectorSub;
+        
     }
 
     public Vector subV(int l, int r) throws IndexOutOfBoundsException {//will return a sub vector between the
@@ -138,12 +153,39 @@ public class Vector {
         return null;
     }
 
-    public Vector mult(Vector V) throws NullPointerException {//Multiple every element of this by corresponding element in V
-        return null;
+    public Vector mult(Vector v) throws NullPointerException {//Multiple every element of this by corresponding element in V
+        
+        int len = this.getLength();
+        
+        Vector vectorMult = new Vector(len,0.0);
+        
+        for(int q = 0; q < len; q++){
+            vectorMult.elements[q] = this.elements[q];
+        }
+        
+        if(len >= v.getLength())
+            len = v.getLength();
+        
+        for(int w = 0; w < len; w++){
+            vectorMult.elements[w] *= v.elements[w];
+            //System.out.print("["+vectorMult.elements[w]+"] ");
+            if(vectorMult.elements[w] == -0.0)
+                vectorMult.elements[w] = 0.0;
+        }
+        //System.out.println();
+        return vectorMult;
     }
 
     public Vector mult(double aDouble) {//Multiply every element of this by aDouble
-        return null;
+        
+        int len = this.getLength();
+        Vector vectorMult = new Vector(len, 1);
+        
+        for(int q = 0; q <len; q++)
+            vectorMult.elements[q] = this.elements[q] * aDouble;
+        
+        return vectorMult;
+        
     }
 
     public Vector Normalize() {//returns this as a normalized vector
