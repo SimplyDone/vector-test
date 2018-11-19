@@ -3,7 +3,7 @@ package assign_2;
 import java.util.Arrays;
 
 
-/** @version  3.0
+/** @version 3.0
  * 
  *  @author Alex Zurad, Robbie McDonnell
  */
